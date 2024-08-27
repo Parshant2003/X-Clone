@@ -19,7 +19,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin:"http://localhost:3000",
+    origin:"https://xclone-i40mro08i-parshant-bishts-projects.vercel.app",
     credentials:true
 }
 app.use(cors(corsOptions));
