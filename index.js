@@ -19,7 +19,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin:"https://xclone-i40mro08i-parshant-bishts-projects.vercel.app",
+    origin:"https://x-clone-wp9f.onrender.com",
     credentials:true
 }
 app.use(cors(corsOptions));
