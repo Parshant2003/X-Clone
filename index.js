@@ -19,7 +19,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin:"https://x-clone-wp9f.onrender.com",
+    origin:"http://localhost:3000",
     credentials:true
 }
 app.use(cors(corsOptions));
