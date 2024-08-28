@@ -18,11 +18,17 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 app.use(cookieParser());
-const corsOptions = {
-    origin:"https://xclone-seven.vercel.app",
-    credentials:true
-}
-app.use(cors(corsOptions));
+app.use(cors({
+    origin: (origin, callback) => {
+      // Allow requests from any origin
+      callback(null, origin);
+    },
+    credentials: true, // Allow credentials
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
+    allowedHeaders: 'Content-Type,Authorization', // Allowed headers
+  }));
+
+
 
 // api
 app.use("/api/v1/user",userRoute);
